@@ -1,4 +1,4 @@
-package manage;
+package engine;
 
 public class KozMacaGame {
 
