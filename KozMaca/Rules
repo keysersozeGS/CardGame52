@@ -1,0 +1,18 @@
+Kart sayısı	52
+Oyun yönü	Saat yönünde
+Kart sıralaması	A K Q J 10 9 8 7 6 5 4 3 2
+---------------------
+Oyun başlarken herkes ne alacağını net olarak deklare edip, sırasıyla yazdırır.
+Oyun bittikten sonra 1 eksik alan batar 3 ve daha fazla yan alan yine batar.
+------------------------
+Bir kişi 4 derse: 
+0,1,2,3 alırsa => -40
+4,5,6 alırsa => 40,41,42
+7,8,9,10,11,12,13 => -40
+----------------------------
+El almaz deyip el alırsan -50, almazsan +50 olur.
+---------------------------
+Her zaman koz maçadır.
+Her el varsa tabandaki kartın türünden atılmak zorundadır, yoksa ve koz varsa atılmak zorunludur.
+---------------------------
+Geçmek mecburidir.
