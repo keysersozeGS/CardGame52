@@ -49,7 +49,7 @@ public class Card implements Comparable<Card> {
 			return 1;
 		}
 		else if(this.getSuit() != Suit.SPADES &&
-				card.getSuit() != Suit.SPADES)
+				card.getSuit() == Suit.SPADES)
 		{
 			return -1;
 		}
