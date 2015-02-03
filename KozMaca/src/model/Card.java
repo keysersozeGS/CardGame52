@@ -1,33 +1,34 @@
 package model;
 
-import model.enums.Symbol;
+import model.enums.Suit;
+import model.enums.Rank;
 
-public class Card {
-	private Symbol symbol;
-	private Number number;
+public class Card implements Comparable<Card> {
+	private Suit suit;
+	private Rank rank;
 	private boolean trump;
 
-	public Card(Symbol symbol, Number number, boolean trump) {
+	public Card(Suit suit, Rank rank, boolean trump) {
 		super();
-		this.symbol = symbol;
-		this.number = number;
+		this.suit = suit;
+		this.rank = rank;
 		this.trump = trump;
 	}
 
-	public Symbol getSymbol() {
-		return symbol;
+	public Suit getSuit() {
+		return suit;
 	}
 
-	public void setSymbol(Symbol symbol) {
-		this.symbol = symbol;
+	public void setSuit(Suit suit) {
+		this.suit = suit;
 	}
 
-	public Number getNumber() {
-		return number;
+	public Rank getRank() {
+		return rank;
 	}
 
-	public void setNumber(Number number) {
-		this.number = number;
+	public void setRank(Rank rank) {
+		this.rank = rank;
 	}
 
 	public boolean isTrump() {
@@ -36,6 +37,27 @@ public class Card {
 
 	public void setTrump(boolean trump) {
 		this.trump = trump;
+	}
+
+
+	@Override
+	public int compareTo(Card card) {
+		
+		if(this.getSuit() == Suit.SPADES && 
+				card.getSuit() != Suit.SPADES)
+		{
+			return 1;
+		}
+		else if(this.getSuit() != Suit.SPADES &&
+				card.getSuit() == Suit.SPADES)
+		{
+			return -1;
+		}
+		else
+		{
+			return this.getRank().compareTo(card.getRank());
+		}
+		
 	}
 
 }
